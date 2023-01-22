@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Inyeccion de Dependencias";
+    var Singleton = (Biblioteca)ViewBag.Singleton;
+    var Transient = (Books)ViewBag.Transient;
+    var Transient1 = (Books)ViewBag.Transient1;
+    var Transient2 = (Books)ViewBag.Transient2;
+    var Transient3 = (Books)ViewBag.Transient3;
+    var Transient4 = (Books)ViewBag.Transient4;
+    var Scoped = (Cliente)ViewBag.Scoped;
+} 
+
+<div>
+    <center>
+        <b>Scoped: </b> <h5> id del Cliente que ha ingresado a la página:</h5> <h3>@Scoped.Id</h3>
+    </center>
+</div>
+    
+<div >
+    <center>
+        <b>Singleton: </b> <h2> @Singleton.name </h2>
+    </center>
+</div>
+
+<div class="text-center">
+    <center>
+        <b> Trasient: </b>  <h4> Books </h4>
+    </center>
+</div>
+
+<center> 
+<table>
+    <tr>
+        <th> Autor </th>
+        <th style="background-color: mediumpurple"> Título </th>
+    </tr>
+    <tr>
+        <td>@Transient.name_Author</td>
+        <td style="background-color: mediumpurple">@Transient.title</td>
+    </tr>
+    <tr>
+        <td>@Transient1.name_Author</td>
+        <td style="background-color: mediumpurple">@Transient1.title</td>
+    </tr>
+    <tr>
+        <td>@Transient2.name_Author</td>
+        <td style="background-color: mediumpurple">@Transient2.title</td>
+    </tr>
+    <tr>
+        <td>@Transient3.name_Author</td>
+        <td style="background-color: mediumpurple">@Transient3.title</td>
+    </tr>
+    <tr>
+        <td>@Transient4.name_Author</td>
+        <td style="background-color: mediumpurple">@Transient4.title</td>
+    </tr>
+</table>
+</center>
+
